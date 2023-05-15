@@ -12,9 +12,6 @@ library(sp); library(rgdal); library(broom); library(viridis); library(stringr)
 library(ggmap); library(magrittr); library(vroom); library(sf); library(lubridate)
 library(unmarked); library(parsedate)
 
-# setwd() creates problem when trying to publish to shiny.io, so don't run it
-# setwd("~/Desktop/Grad School/Code/Serengeti_Shiny/basic_serengeti")
-
 # no scientific notation and round to 2 decimals
 options(scipen = 999) #, digits = 2)
 
@@ -72,7 +69,6 @@ camera_operation["date"] <- lapply(camera_operation["date"], parsedate::parse_da
 
 # Matches site in camera_operation with unique sites in dat and selects only those match
 camera_operation <- camera_operation[camera_operation$site %in% unique(dat$site), ]
-
 
 #########################################################################################
 
