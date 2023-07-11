@@ -15,7 +15,6 @@ library(unmarked); library(parsedate)
 # no scientific notation and round to 2 decimals
 options(scipen = 999) #, digits = 2)
 
-
 # Data import -------------------------------------------------------------
 
 # import shapefile
@@ -161,7 +160,6 @@ om.calculate <- function(record.table.subset, camop, start.date, end.date, covar
   
   return(occu_pred)
 }
-
 
 ###########################################################################
 
